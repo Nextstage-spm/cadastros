@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #e4edfa6c;
+}
+/* Cabeçalho */
+header {
+background-color: #f9f9f9; /* Cor de fundo do cabeçalho */
+padding: 0px 0;
+}
+/* Contêiner do cabeçalho */
+.header-container {
+display: flex;
+justify-content: space-between; /* Distribui o logotipo à esquerda e o menu à direita */
+align-items: right; /* Alinha os itens verticalmente ao centro */
+width: 99%;
+margin: 0px 0px;
+}
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e4edfa6c;
+        }
+        /* Cabeçalho */
+header {
+    background-color: #f9f9f9; /* Cor de fundo do cabeçalho */
+    padding: 0px 0;
+}
+   /* Contêiner do cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribui o logotipo à esquerda e o menu à direita */
+    align-items: right; /* Alinha os itens verticalmente ao centro */
+    width: 99%;
+    margin: 0px 0px; /* Centraliza o conteúdo na tela */
+}
+/* Estilo para o header */
+header {
+    display: flex;
+    justify-content: space-between; /* Espaça o logo e o banner */
+    margin-top: 5px;
+    margin-bottom: 3px;;
+    align-items: center; /* Alinha o logo e o banner no centro verticalmente */
+    padding: 0px; /* Espaçamento ao redor do header */
+    height: 55px;
+    background-color: #f9f9f9; /* Cor de fundo para o header (pode ser alterada conforme necessário) */
+}
+.header-container {
+            max-width: 1495px; /* Largura máxima do container */
+            width: 1477px;
+            height: 31px;
+            margin: center; /* Centraliza o container na página */
+            margin-top: -20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            border: 0.1px solid #e4e4e4; /* Borda do container */
+            border-radius: 0px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno do container */
+            background-color: #f9f9f9; /* Cor de fundo do container */
+            box-shadow: 0px 1px 1px 1px rgba(193, 193, 193, 0.1);
+        }
+/* Logotipo */
+.logo img {
+    position: fixed;
+    z-index: 10; /* Garante que o logotipo fique acima do menu */
+    height: 55px; /* Ajuste conforme o tamanho do logotipo */
+    top: 10px; /* Ajuste conforme a distância do topo */
+    left: 10px; /* Ajuste conforme a posição à esquerda */
+    margin-top: 0; /* Remova o margin-top negativo */
+}
+
+/* Menu de navegação */
+.menu {
+    width: 100%;
+    position: fixed;
+    top: 0; /* Mantém o menu na mesma linha do logotipo */
+    left: 0;
+    background-color: #f9f9f9;
+    padding: 18px 0; /* Padding para ajuste do conteúdo dentro do menu */
+    text-align: center;
+    display: flex; /* Coloca os itens do menu em linha */
+    align-items: center; /* Alinha os itens do menu verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens do menu horizontalmente */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para o menu */
+    z-index: 1; /* Garante que o menu fique abaixo do logotipo */
+}
+
+/* Itens do menu */
+.menu a {
+    text-decoration: none; /* Remove sublinhado padrão */
+    color: rgb(129, 121, 121); /* Cor do texto */
+    padding: 10px 25px; /* Espaçamento interno dos links */
+    font-family: 'Open-sans', sans-serif;
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: normal;
+    transition: 0.3s ease; /* Efeito suave ao passar o mouse */
+    position: relative;
+    display: inline-block;
+    margin: 0 15px; /* Adiciona espaçamento lateral */
+}
+
+/* Cor de fundo ao passar o mouse */
+.menu a:hover {
+    background-color: #f9f9f9;
+}
+
+/* Sublinhado animado */
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3.2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(187, 87, 165); 
+    transition: width 0.3s ease-in-out;
+}
+
+.menu a:hover::after {
+    width: 100%; /* Aumenta o sublinhado ao passar o mouse */
+}
+
+/* Itens específicos do menu */
+.menu a.inicio::after {
+    background-color: #011772; /* Cor do sublinhado para Início */
+}
+
+.menu a.inscricao::after {
+    background-color: #32cd32; /* Cor do sublinhado para Inscrição */
+}
+
+.menu a.regras::after {
+    background-color: #9400d3; /* Cor do sublinhado para Regras */
+}
+
+.menu a.ajuda::after {
+    background-color: #ff4500; /* Cor do sublinhado para Ajuda */
+}
+
+.menu a.sobre::after {
+    background-color: #ffa500; /* Cor do sublinhado para Sobre */
+}
+
+    header img {
+      height: 40px;
+    }
+
+    .menu button {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    padding: px 32px; /* Espaçamento interno do botão */
+}
+
+.menu button {
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    cursor: pointer;
+    padding: 10px 32px; /* Espaçamento interno do botão */
+    background-color: #023d54; /* Cor de fundo do botão */
+    padding: 10px 32px; /* Espaçamento interno do botão */
+    font-size: 19px; /* Tamanho do texto no botão */
+    cursor: pointer; /* Cursor de pointer para indicar que é clicável */
+    border-radius: 30px; /* Bordas arredondadas */
+    margin-left: 0px; /* Espaço entre o menu e o botão */
+    margin-right: 0px;
+    margin-top: -33px;
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+    font-family: "Open Sans", sans-serif;
+}
+  
+  .menu button:hover {
+    background-color: #023d54; /* Cor de fundo quando o mouse está sobre o botão */
+  }
+  
+  .menu button:active {
+    transform: scale(0.99); /* Leve redução no tamanho ao clicar */
+  }
+  
+  .menu button:focus {
+    outline: none; /* Remove o contorno padrão quando o botão está em foco */
+    box-shadow: 0 0 0 0px #000000; /* Adiciona uma sombra ao redor do botão quando está em foco */
+  }
+  
+
+/* Animação ao passar o mouse */
+.menu a:hover::after {
+    width: 100%; /* O sublinhado se expande ao passar o mouse */
+}
+
+.menu button:hover {
+    background-color: #468296cb; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo do Popup */
+.popup {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 1000px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 590px; /* Aumente o valor aqui para ajustar a largura */
+    max-width: 90%; /* Certifique-se de que o popup não ultrapasse a largura da tela */
+    height: 320px;
+    border-radius: 10px;
+}
+
+.popup-content {
+    padding: 90px;
+    text-align: left;
+    height: 300px; /* Define a altura fixa */
+}
+
+.popup-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #023d54;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    margin-top: -70px;
+    letter-spacing: 0.3px; 
+}
+
+.popup-content h4 {
+    text-align: left;
+    margin-bottom: 1px;
+    font-size: 13px;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 10px;
+    margin-left: 57px;
+}
+
+.popup-content h3 {
+    text-align: center;
+    margin-bottom: 1px;
+    font-size: 13px;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.popup-content input[type="email"],
+.popup-content input[type="password"] {
+    width: 75%;
+    padding: 8px;
+    margin: 10px 0;
+    margin-top: 0px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 42px;
+}
+
+.popup-content button {
+    background-color: #023d54;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    width: 145px;
+    height: 35px;
+    margin-left: 340px;
+}
+
+.popup-content a {
+    display: block;
+    margin-top: 0px;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: -5px;
+    right: 9px;
+    cursor: pointer;
+    font-size: 45px;
+    font-weight: normal;
+    color: #afafaf;
+}
+
+/* Fundo escuro quando o popup estiver ativo */
+.popup.active {
+    display: block;
+}
+.container {
+            max-width: 1050px; /* Largura máxima do container */
+            width: 1050px;
+            height: 1950px;
+            margin: 0 auto; /* Centraliza o container na página */
+            border: 1px solid #ccc; /* Borda do container */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno do container */
+            background-color: #f9f9f9; /* Cor de fundo do container */
+            box-shadow: 0px 20px 25px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .container img {
+          margin-left: 320px;
+          margin-top: 15px;
+          margin-bottom: -10px;
+          width: 420px;
+          height: 60px;
+        }
+
+        h1 {
+    font-size: 40px;
+    text-align: center; /* Centraliza o título */
+    color: #023d54;
+    font-family: 'open-sans', sans-serif;
+    font-weight: normal;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+hr {
+            border: none;
+            border-top: 1px solid #ccc; /* Espessura e cor */
+            width: 70%; /* Largura da linha */
+            margin: 20px auto; /* Centraliza a linha */
+            margin-top: -10px;
+}
+
+h2 {
+      font-family: 'open-sans' , sans-serif;
+      font-size: 20px;
+      font-weight: bolder;
+      color: #000000;
+      text-align: justify;
+      line-height: 1.2;
+      margin-top: 70px;
+      margin-left: 20px;
+      margin-right: 22px;
+}
+h2 p {
+      font-family: 'open-sans' , sans-serif;
+      font-size: 17px;
+      font-weight: bold;
+      color: #000000;
+      text-align: justify;
+      line-height: 1.2;
+      margin-top: -30px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      margin-right: 22px;
+}
+h4 p{
+      font-family: 'nunito' , sans-serif;
+      font-size: 17px;
+      font-weight: normal;
+      font-style: italic;
+      color: #525252;
+      margin: 30px 0;
+      text-align: justify;
+      line-height: 1.2; 
+      margin-bottom: -68px;
+      margin-top: -65px;
+      margin-left: 20px;
+      margin-right: 22px;
+}
+h5 p{
+  font-family: 'nunito' , sans-serif;
+      font-size: 17px;
+      font-weight: normal;
+      color: #525252;
+      margin: 30px 0;
+      text-align: justify;
+      line-height: 1.2; 
+      margin-left: 20px;
+      margin-right: 22px;
+}
+h5 a {
+    font-family: 'nunito' , sans-serif;
+      font-size: 17px;
+      font-weight: normal;
+      color: #525252;
+      margin: 30px 0;
+      line-height: 1.2; 
+      margin-left: 450px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+}
+
+h6{
+    text-align: center; /* Centraliza o título */
+    font-size: 15px;
+    margin-top: 75px;
+    margin-bottom:50px;
+    color: #464849;
+    font-family: 'open-sans', sans-serif;
+    text-decoration: underline;
+}
+h6 a{
+    text-align: right; 
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    margin-left: 945px;
+    color: #5f8497;
+    font-family: 'open-sans', sans-serif;
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="logo">
+            <img src="./img/Slide S.P.M. (13).png" alt="Logotipo" height="" width="125" a href="html.index">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="./inicio.php">Início</a>
+            <a href="./inscricao.html">Inscrição</a>
+            <a href="#consulta">Consulta</a>
+            <a href="./dduvida.html">Dúvidas</a>
+            <a href="./sobree.html">Regras</a>
+            <a href="./sobre.html">Sobre </a>
+            <button id="loginBtn">Fazer Login</button>
+        </nav>
+    </div>
+    
+    <!-- Popup de Login -->
+    <div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Comece sua pré-matrícula no SPM</h2>
+        <form action="#" method="POST">
+    
+            <h4><label for="email">E-mail</label></h4>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+    
+           
+          <h4><label for="senha">Senha</label></h4>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+    
+            <h3><a href="#">Esqueceu sua senha?</a></h3>
+    
+            <button type="submit">Fazer Login</button>
+        </form>
+    </div>
+    </div>
+</div>
+<br>
+<br>
+<h1>Manual do Aluno</h1>
+<hr>
+<div class="container">
+  <img src="./img/logo-faetec.png" alt="Logotipo" height="90" width="600">
+  <h5><a>Atualizado em 2019</a></h5>
+  <h2>Boas Vindas,</h2> 
+
+ <h5><p>É com grande satisfação que recebemos você como nosso novo aluno aqui na Unidade FAETEC CVT
+Nilópolis. Antes de tudo, parabenizamos por ingressar nessa instituição. A FAETEC é uma instituição
+de Ensino que oferece cursos de Formação inicial e Continuada/Qualificação Profissional que
+objetivam fundamentalmente: promover a inserção no mundo do trabalho; especializar aperfeiçoar
+jovens e/ ou adultos, a fim de promover seu ingresso e/ ou reingresso no mercado de trabalho. Como
+espaço educativo, a FAETEC prima pelas boas práticas escolares tendo como principal eixo
+norteador a educação de qualidade para todos. Para isso, tem sua concepção física e pedagógica
+criteriosamente planejamento, apresenta instalação e laboratórios dotados de equipamentos
+sintonizados como as necessidades do mercado. Desejamos a você uma boa experiência educativa
+na nossa Unidade de Ensino.</p></h5>
+<br>
+<br>
+<h4><p>Seja bem-vindo!</p></h4>
+<br>
+ <h5><p>Diretoria de Formação Inicial e Continuada - DIF.</p></h5>
+
+<h2> <p>NORMAS E ORIENTAÇÕES</p></h2> 
+
+<h5><p>Uniforme - A FAETEC disponibiliza blusa para os estudantes. Porém, proíbe o ingresso nas
+dependências da Unidade trajando shorts, bermuda, mini saias, blusa com barriga de fora, blusas
+muito decotadas, chinelos, sandálias de dedo, etc.</p></h5>
+
+<h5> <p>Horário das aulas - O horário das aulas será informado pela secretaria da unidade. O aluno terá uma
+tolerância de 15 (quinze) minutos para entrar na sala de aula ou laboratório, após o início da aula.</p></h5>
+
+<h5> <p>Assiduidade - A assiduidade será apurada sobre o somatório dos dias letivos previstos em cada curso.
+Nos cursos de Formação Inicial e Continuada, independentemente de quaisquer resultados de
+aproveitamento, será considerado reprovado, no período letivo, o aluno que não alcançar a assiduidade
+mínima de 75% de carga horária total do curso. A ausência prolongada acima de 25% do aluno, sem
+justificativa, será considerada evasão.</p></h5>
+
+<h5> <p>Avaliação de Rendimento - A avaliação do rendimento escolar compreenderá a verificação do
+aproveitamento do aluno nas aulas (assimilação dos conteúdos, participação e atitudes) e da
+assiduidade. Será considerado aprovado o aluno que ao final do curso obtiver Média Final igual ou
+superior a 6,0 (seis) e aprovado ema assiduidade. </p></h5>
+
+<h2> <p>DEVERES E PROIBIÇÕES </p></h2>
+<h5><p>São Deveres do aluno: </p></h5>
+    <h5><p>I - Comparecer pontualmente e assiduamente às aulas e demais atividades escolares programadas,
+empenhando-se no êxito de sua execução; </p></h5>
+<h5><p>II - Respeitar os colegas, docentes e demais funcionários da Unidade; </p></h5>
+  <h5><p>III- Indenizar prejuízo causado por danos às instalações, ou perda de qualquer material de 
+propriedade da Unidade ou de colega, quando ficar comprovada sua responsabilidade;</p></h5>
+<h5><p>IV - Identificar-se sempre que solicitado, apresentando documento determinado pela Unidade;</p></h5>
+  <h5><p>V - Apresentar solicitação por escrito e assinado pelo responsável para fins de saída antecipada
+quando menor de dezoito anos;</p></h5>
+<h5><p>VI - Justificar as faltas durante período do curso e solicitar cancelamento de sua matrícula, quando
+maior de dezoito anos. No caso de menor de idade, a solicitação deve ser feita pelo responsável; </p></h5>
+<h5><p>VII - Apresentar-se adequadamente vestido de acordo com as normas vigentes. </p></h5>
+
+<h2> <p>É VERDADE AO ALUNO:</p></h2>
+    <h5><p>I - Ocupar-se, durante as atividades do curso, de qualquer atividade alheia às mesmas; </p></h5>
+<h5><p>II - Promover coletas, subscrições e outro tipo de campanha, sem autorização da coordenação da Unidade; </p></h5>
+  <h5><p>III- Praticar quaisquer atos de viol~encia física, psicológa ou moral contra pessoas dentro da Unidade;</p></h5>
+<h5><p>IV - Introduzir, portar, guardar ou fazer uso de substâncias tóxicas;</p></h5>
+  <h5><p>V - Portar, ter sob sua guarda ou utilizar qualquer material que possa causar risco a saúde, a sua segurança, a sua integridade física e as de outrem;</p></h5>
+<h5><p>VI - Utilizar na sala e nos laboratórios, objsetos que não eestejam vinculados ao aprendizado; </p></h5>
+<h5><p>VII - Retirar-se da Unidade durante o horário de aula sem autorização; </p></h5>
+<h5><p>IX - Danificar o patrimônio da Unidade; </p></h5>
+<h5><p>X - Entrar e/ou permanecer na Unidade de Ensino trajando vestimentas que não condizentes com uma unidade educacional, tais como: shorts, bermudas, minissaia, tops, baby look e chinelos. </p></h5>
+</div>
+<div>
+<h6> <a href="./sobree.html">Voltar para o topo</a></h6>
+</div>
+    <script src ="js/script.js"></script>
+  </body>
+  </html>
