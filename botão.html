@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./img/Slide S.P.M. (13).png" type="image/x-icon">
+    <style>
+        .button-container {
+            display: grid;
+            grid-template-areas: 
+                "btn1 btn2 btn3"
+                ". btn4 ."
+                "btn5 btn6 btn7";
+            row-gap: 10px; 
+            grid-gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos individuais dos botões */
+        a.button {
+            row-gap: 100px; 
+            width: 200px;
+            height: 40px;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: "Open Sans", sans-serif;
+            color: #fff;
+            border: none;
+            border-radius: 45px;
+            cursor: pointer;
+            box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .button i {
+            margin-left: 10px; /* Espaçamento entre o texto e o ícone */
+            font-size: 24px;
+        }
+
+        .btn-orange-light-top {
+            background: linear-gradient(to bottom, #ed9bf4, #5c1465);
+            grid-area: btn1;
+            margin-top: -50px;
+            margin-bottom: 100px;
+            margin-left: -100px;
+        }
+        
+        .btn-purple-light-top {
+            background: linear-gradient(to bottom, #a08ef9, #1d0966);
+            grid-area: btn2;
+            margin-top: -50px;
+            margin-bottom: 100px;
+        }
+
+        .btn-green-light-top {
+            background: linear-gradient(to bottom, #afcc8d, #16581a);
+            grid-area: btn3;
+            margin-top: -50px;
+            margin-bottom: 100px;
+        }
+
+        .btn-red-light-top {
+            background: linear-gradient(to bottom, #f15d71, #b81701);
+            grid-area: btn4;
+            margin-top: -50px;
+            margin-bottom: 100px;
+        }
+
+        .btn-orange-light-bottom {
+            background: linear-gradient(to bottom, #adadad, #615d5d);
+            grid-area: btn5;
+            margin-top: -50px;
+            margin-bottom: 100px;
+        }
+        
+        .btn-purple-light-bottom {
+            background: linear-gradient(to bottom, #57c8d0, #0a5b4f);
+            grid-area: btn6;
+            margin-top: -50px;
+            margin-bottom: 100px;
+        }
+
+        .btn-green-light-bottom {
+            background: linear-gradient(to bottom, #fa92d5, #a91a56);
+            grid-area: btn7;
+            margin-top: -50px;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <a href="#lista-espera" class="button btn-orange-light-top">Lista de Espera<i class="fas fa-clock icon"></i></a>
+    <a href="#" class="button btn-purple-light-top">Curso<i class="fas fa-book-open"></i></a>
+    <a href="#professor" class="button btn-green-light-top">Professor<i class="fas fa-chalkboard-teacher"></i></a>
+    <a href="#turma" class="button btn-red-light-top">Turma<i class="fas fa-users"></i></a>
+    <a href="#disciplina" class="button btn-orange-light-bottom">Disciplina<i class="fas fa-book"></i></a>
+    <a href="#aluno" class="button btn-purple-light-bottom">Aluno<i class="fas fa-user-graduate"></i></a>
+    <a href="#relatorios" class="button btn-green-light-bottom">Relatórios Gerenciais<i class="fas fa-chart-bar icon"></i></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,823 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/Slide S.P.M. (13).png" type="image/x-icon">
+        <title>Dúvidas</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #e4edfa6c;
+            }
+            /* Cabeçalho */
+    header {
+        background-color: #f9f9f9; /* Cor de fundo do cabeçalho */
+        padding: 0px 0;
+    }
+    /* Contêiner do cabeçalho */
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* Distribui o logotipo à esquerda e o menu à direita */
+        align-items: right; /* Alinha os itens verticalmente ao centro */
+        width: 99%;
+        margin: 0px 0px; /* Centraliza o conteúdo na tela */
+    }
+       
+    /* Estilo para o header */
+    header {
+        display: flex;
+        justify-content: space-between; /* Espaça o logo e o banner */
+        margin-top: 5px;
+        margin-bottom: 3px;;
+        align-items: center; /* Alinha o logo e o banner no centro verticalmente */
+        padding: 0px; /* Espaçamento ao redor do header */
+        height: 55px;
+        background-color: #f9f9f9; /* Cor de fundo para o header (pode ser alterada conforme necessário) */
+    }
+    
+  /* Logotipo */
+.logo img {
+    position: fixed;
+    z-index: 10; /* Garante que o logotipo fique acima do menu */
+    height: 55px; /* Ajuste conforme o tamanho do logotipo */
+    top: 4px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    margin-top: 0; /* Remova o margin-top negativo */
+}
+
+.logo img {
+    max-width: 105px;
+    height: auto;
+    margin-top: 7px;
+}
+
+/* Menu de navegação */
+.menu {
+    width: 100%;
+    position: fixed;
+    top: 0; /* Mantém o menu fixo no topo da página */
+    left: 0;
+    background-color: #f9f9f9;
+    padding: 18px 0; /* Padding para ajuste do conteúdo dentro do menu */
+    text-align: center;
+    display: flex; /* Coloca os itens do menu em linha */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: flex-end; /* Alinha os itens do menu à direita */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para o menu */
+    z-index: 1; /* Garante que o menu fique abaixo do logotipo */
+}
+
+/* Itens do menu */
+.menu a {
+    text-decoration: none; /* Remove sublinhado padrão */
+    color: rgb(129, 121, 121); /* Cor do texto */
+    padding: 10px 25px; /* Espaçamento interno dos links */
+    font-family: 'Open-sans', sans-serif;
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: normal;
+    transition: 0.3s ease; /* Efeito suave ao passar o mouse */
+    position: relative;
+    display: inline-block;
+    margin: 0 15px; /* Adiciona espaçamento lateral */
+}
+
+/* Cor de fundo ao passar o mouse */
+.menu a:hover {
+    background-color: #f9f9f9;
+}
+
+/* Sublinhado animado */
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3.2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(187, 87, 165); 
+    transition: width 0.3s ease-in-out;
+}
+
+.menu a:hover::after {
+    width: 100%; /* Aumenta o sublinhado ao passar o mouse */
+}
+
+/* Itens específicos do menu */
+.menu a.index::after {
+    background-color: #011772; /* Cor do sublinhado para Início */
+}
+
+.menu a.inscricao::after {
+    background-color: #32cd32; /* Cor do sublinhado para Inscrição */
+}
+
+.menu a.regras::after {
+    background-color: #9400d3; /* Cor do sublinhado para Regras */
+}
+
+.menu a.duvidas::after {
+    background-color: #ff4500; /* Cor do sublinhado para Ajuda */
+}
+
+.menu a.sobre::after {
+    background-color: #ffa500; /* Cor do sublinhado para Sobre */
+}
+
+header img {
+    height: 40px;
+}
+
+.menu button {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0px 32px; /* Espaçamento interno do botão */
+}
+
+.menu button {
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    cursor: pointer;
+    padding: 10px 32px; /* Espaçamento interno do botão */
+    background-color: #023d54; /* Cor de fundo do botão */
+    padding: 10px 32px; /* Espaçamento interno do botão */
+    font-size: 19px; /* Tamanho do texto no botão */
+    cursor: pointer; /* Cursor de pointer para indicar que é clicável */
+    border-radius: 30px; /* Bordas arredondadas */
+    margin-left: 0px; /* Espaço entre o menu e o botão */
+    margin-right: 0px;
+    margin-top: 9px;
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+    font-family: "Open Sans", sans-serif;
+}
+
+.menu button:hover {
+    background-color: #023d54; /* Cor de fundo quando o mouse está sobre o botão */
+}
+
+.menu button:active {
+    transform: scale(0.99); /* Leve redução no tamanho ao clicar */
+}
+
+.menu button:focus {
+    outline: none; /* Remove o contorno padrão quando o botão está em foco */
+    box-shadow: 0 0 0 0px #000000; /* Adiciona uma sombra ao redor do botão quando está em foco */
+}
+
+/* Animação ao passar o mouse */
+.menu a:hover::after {
+    width: 100%; /* O sublinhado se expande ao passar o mouse */
+}
+
+.menu button:hover {
+    background-color: #468296cb; /* Cor mais escura ao passar o mouse */
+}
+
+    
+    /* Estilo do Popup */
+    .popup {
+        display: none; /* Oculto por padrão */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        box-shadow: 0px 0px 1000px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        width: 590px; /* Aumente o valor aqui para ajustar a largura */
+        max-width: 90%; /* Certifique-se de que o popup não ultrapasse a largura da tela */
+        height: 320px;
+        border-radius: 10px;
+    }
+    
+    .popup-content {
+        padding: 90px;
+        text-align: left;
+        height: 300px; /* Define a altura fixa */
+    }
+    
+    .popup-content h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 25px;
+        color: #023d54;
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        margin-top: -70px;
+        letter-spacing: 0.3px; 
+    }
+    
+    .popup-content h4 {
+        text-align: left;
+        margin-bottom: 1px;
+        font-size: 13px;
+        color: #000000;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 10px;
+        margin-left: 57px;
+    }
+    
+    .popup-content h3 {
+        text-align: center;
+        margin-bottom: 1px;
+        font-size: 13px;
+        color: #000000;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 20px;
+        margin-bottom: -10px;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .popup-content input[type="email"],
+    .popup-content input[type="password"] {
+        width: 75%;
+        padding: 8px;
+        margin: 10px 0;
+        margin-top: 0px;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 12px;
+        margin-left: 42px;
+    }
+    
+    .popup-content button {
+        background-color: #023d54;
+        color: white;
+        font-size: 16px;
+        font-weight: normal;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 15px;
+        margin-top: 45px;
+        margin-bottom: 0px;
+        width: 145px;
+        height: 35px;
+        margin-left: 340px;
+    }
+    
+    .popup-content a {
+        display: block;
+        margin-top: 0px;
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+    }
+    
+    .popup-content .close {
+        position: absolute;
+        top: -5px;
+        right: 9px;
+        cursor: pointer;
+        font-size: 45px;
+        font-weight: normal;
+        color: #afafaf;
+    }
+    
+    /* Fundo escuro quando o popup estiver ativo */
+    .popup.active {
+        display: block;
+    }
+    
+    h1 {
+        font-size: 40px;
+        text-align: center; /* Centraliza o título */
+        color: #023d54;
+        font-family: 'nunito', sans-serif;
+        font-weight: normal;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    
+    hr {
+                border: none;
+                border-top: 1px solid #ccc; /* Espessura e cor */
+                width: 70%; /* Largura da linha */
+                margin: 20px auto; /* Centraliza a linha */
+                margin-top: -10px;
+    }
+    h5 {
+        text-align: left; /* Centraliza o título */
+        font-size: 17px;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        color: #15729a;
+        font-family: 'open-sans', sans-serif;
+        text-decoration: none;
+    }
+    
+    .faq-item:hover h5{
+        text-decoration: underline;
+    }
+    
+    h6{
+        text-align: center; /* Centraliza o título */
+        font-size: 20px;
+        margin-top: 75px;
+        margin-bottom:50px;
+        color: #464849;
+        font-family: 'open-sans', sans-serif;
+        text-decoration: underline;
+    }
+    h6 a{
+        text-align: right; 
+        font-size: 12px;
+        margin-top: 0px;
+        margin-bottom: 100px;
+        margin-left: 945px;
+        color: #5f8497;
+        font-family: 'open-sans', sans-serif;
+        text-decoration: underline;
+    }
+    
+    .faq-container {
+                max-width: 1050px; /* Largura máxima do container */
+                width: 1050px;
+                height: 1130px;
+                margin: 0 auto; /* Centraliza o container na página */
+                border: 1px solid #ccc; /* Borda do container */
+                border-radius: 5px; /* Bordas arredondadas */
+                padding: 20px; /* Espaçamento interno do container */
+                background-color: #f9f9f9; /* Cor de fundo do container */
+                box-shadow: 0px 20px 25px 12px rgba(0, 0, 0, 0.1);
+            }
+            .faq-item {
+                margin-bottom: 5px;
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                padding: 1px;
+                width: 1000px;
+                cursor: pointer;
+                background-color: #f9f9f9;
+                transition: background-color 0.3s;
+                margin-left: 23px;
+            }
+            .faq-item:hover {
+                background-color: #f0f0f0;
+            }
+            .faq-answer {
+                font-size: 17px;
+                display: none;
+                padding-top: 1px;
+                margin-left: 22px;
+    
+            }
+            .arrow {
+                margin-left: 960px;
+                margin-top: -40px;
+                margin-bottom: 0px;
+                transition: transform 0.3s ease;
+                color: #9d9797;
+            }
+            .faq-item.active .arrow {
+                transform: rotate(180deg); /* Rotaciona a seta ao clicar */
+            }
+            .header-container {
+                max-width: 1480px; /* Largura máxima do container */
+                width: 1480px;
+                height: 31px;
+                margin: center; /* Centraliza o container na página */
+                margin-top: -21px;
+                margin-left: -23px;
+                margin-right: -22px;
+                border: 0.1px solid #e4e4e4; /* Borda do container */
+                border-radius: 0px; /* Bordas arredondadas */
+                padding: 20px; /* Espaçamento interno do container */
+                background-color: #f9f9f9; /* Cor de fundo do container */
+                box-shadow: 0px 1px 1px 1px rgba(193, 193, 193, 0.1);
+            }
+
+
+
+            .modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
+    overflow: auto;
+    text-align: center;
+}
+
+/* Estilo da janela do modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Estilo do botão de fechar */
+.modal .close {
+    font-size: 20px;
+    position: absolute;
+    top: -3px;
+    right: 10px;
+    font-size: 45px;
+    font-weight: normal;
+    color: #afafaf;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    font-size: 22px;
+    color: #023d54;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+#okButton {
+    padding: 10px 20px;
+    background-color: #023d54;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#okButton:hover {
+    background-color: #023d54;
+}
+
+.menu-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-button {
+    background-color: #06357b;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+.user-button i {
+    font-size: 19px;
+    margin-left: -1px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f4f9;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.modal-logoff {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content-logoff {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content-logoff h2 {
+    color: #174650;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.modal-content-logoff p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-confirmar, .btn-cancelar {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirmar {
+    background-color: #174650;
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background-color: #5aa2b0;
+}
+
+.btn-cancelar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background-color: #c82333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+        </style>
+    </head>
+    <body>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./img/Slide S.P.M. (13).png" alt="Logotipo" height="100" width="125" a href="html.index">
+                </a>
+            </div>
+            <nav class="menu">
+                <a href="./logadoaluno.php">Início</a>
+                <a href="./inc4.php">Inscrição</a>
+                <a href="./conn.php">Consulta</a>
+                <a href="./duvidaa.html">Dúvidas</a>
+                <a href="./rregras1.html">Regras</a>
+                <a href="./sobre1.html">Sobre </a>
+            </nav>
+        </div>
+        <div class="user-menu">
+            <button class="user-button" id="menu-toggle"><i class="fas fa-user"></i></button>
+            <div class="dropdown-menu">
+                <a href="edit.it.php">Perfil</a>
+                <a href="javascript:void(0);" onclick="confirmarLogoff()">Sair</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="logoffModal" class="modal-logoff">
+    <div class="modal-content-logoff">
+        <h2>Confirmar Saída</h2>
+        <p>Tem certeza que deseja sair do sistema?</p>
+        <div class="modal-buttons">
+            <button onclick="realizarLogoff()" class="btn-confirmar">Confirmar</button>
+            <button onclick="fecharModalLogoff()" class="btn-cancelar">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+                <h2>É necessario fazer login para acessar.</h2>
+                <button id="okButton" onclick="closeLoginModal()">OK</button>
+            </div>
+        </div>
+        
+        <!-- Popup de Login -->
+        <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Comece sua pré-matrícula no SPM</h2>
+            <form action="#" method="POST">
+        
+                <h4><label for="email">E-mail</label></h4>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        
+               
+              <h4><label for="senha">Senha</label></h4>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+        
+                <h3><a href="#">Esqueceu sua senha?</a></h3>
+        
+                <button type="submit">Fazer Login</button>
+            </form>
+        </div>
+        </div>
+    </div>
+        <script src ="js/script.js"></script>
+        <br>
+        <br>
+    <h1>Tire as suas dúvidas sobre o SPM</h1>
+    <hr>
+    <div class="faq-container">
+        <h6>SISTEMA DE PRÉ-MATRÍCULA</h6>
+    
+    <div class="faq-item">
+        <h5> 1. Como posso fazer minha inscrição de pré-matrícula?</h5>
+        <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+        <div class="faq-answer"
+            <p>Você pode se inscrever através do nosso site na seção "Inscrição".</p>
+    </div>
+    </div>
+    
+    <div class="faq-item">
+        <h5>2. Quais são os requisitos para fazer a inscrição?</h5>
+        <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+        <div class="faq-answer">
+            <p>Os requisitos incluem ter concluído ou estar cursando o ensino médio e passar no processo seletivo.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <h5>3. Como preencher o formulário de inscrição?</h5>
+        <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+        <div class="faq-answer">
+            <p>Tenha em mãos os documentos necessários, preencha corretamente todos os campos do formulário e certifique-se de que todos os dados inseridos estão corretos.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <h5>4. Como fazer o upload dos documentos?</h5>
+        <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+        <div class="faq-answer">
+            <p>O formato aceito para as imagens é o jpg</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <h5>5. O curso é presencial ou online?</h5>
+        <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+        <div class="faq-answer">
+            <p>O curso é oferecido em formato híbrido, com aulas presenciais e online.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <h5>6. Sobre o Ingresso:</h5>
+        <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+        <div class="faq-answer">
+            <p>O ingresso nos cursos da FAETEC se dará por meio de inscrição pelo site www.faetec.rj.gov.br em períodos a ser divulgado. O candidato deverá observar no Edital o Calendário onde constará o Período de Inscrição, Divulgação da Lista de Sorteados e Período de Matrícula.</p>
+        </div>
+    </div>
+    
+        <div class="faq-item">
+            <h5>7. Pedidos e solicitações</h5>
+            <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+            <div class="faq-answer">
+                <p>Os pedidos e solicitações de caráter administrativo como declarações, diplomas etc..., deverão ser reportados a secretária da Unidade Escolar. Os pedidos e solicitações de caráter pedagógico deverão ser reportados a Supervisão Educacional.</p>
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <h5>8. Setores da Unidade</h5>
+            <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+            <div class="faq-answer">
+                <p>Coordenação, Secretária, Recepção e Sala de Professores.</p>
+            </div>
+        </div>
+            
+        <div class="faq-item">
+            <h5>9. Horário de Funcionamento</h5>
+            <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+            <div class="faq-answer">
+                <p>A Unidade funciona das 8h às 22h.</p>
+            </div>   
+        </div>
+                    
+        <div class="faq-item">
+            <h5>10. Cursos Oferecidos</h5>
+            <span class="arrow">&#9660;</span> <!-- Seta para baixo -->
+            <div class="faq-answer">
+                <p></p>
+            </div>
+    </div>
+    <h6> <a href="./duvidaa.html">Voltar para o topo</a></h6>
+        </div>
+    </div>
+    
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+    
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+    
+                const answer = item.querySelector('.faq-answer');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    
+                faqItems.forEach(el => {
+                    if (el !== item) {
+                        el.classList.remove('active');
+                    }
+                });
+                
+                item.classList.toggle('active');
+            });
+        });
+
+
+
+  document.getElementById('inscricao').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o link de funcionar normalmente
+    showLoginModal(); // Exibe o modal de mensagem
+});
+
+document.getElementById('consulta').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o link de funcionar normalmente
+    showLoginModal(); // Exibe o modal de mensagem
+});
+
+// Função para exibir o modal
+function showLoginModal() {
+    document.getElementById("loginModal").style.display = "block";
+}
+
+// Função para fechar o modal
+function closeLoginModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+
+function confirmarLogoff() {
+    const modal = document.getElementById('logoffModal');
+    modal.style.display = 'block';
+}
+
+function fecharModalLogoff() {
+    const modal = document.getElementById('logoffModal');
+    modal.style.display = 'none';
+}
+
+function realizarLogoff() {
+    window.location.href = 'index.php';
+}
+
+
+window.onclick = function(event) {
+    const modal = document.getElementById('logoffModal');
+    if (event.target === modal) {
+        fecharModalLogoff();
+    }
+}
+
+
+    </script>
+    
+    </body>
+    </html>
